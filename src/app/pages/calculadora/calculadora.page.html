@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Calculadora Binária
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/historico']">
+        <ion-icon slot="icon-only" name="time"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-input [(ngModel)]="binary1" placeholder="Número binário"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="binary2" placeholder="Número binário"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="somar()">Somar</ion-button>
+      <ion-item>
+        <ion-label>Resultado:</ion-label>
+        <ion-input [(ngModel)]="result" readonly></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
